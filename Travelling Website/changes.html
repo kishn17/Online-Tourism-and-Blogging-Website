@@ -1,0 +1,94 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+    body {
+   background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; 
+    background-position: center;
+    background-color: #444;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            color: #444;
+        }
+
+        form {
+            display:flex;
+            flex-direction: column;
+	    color:#eee;
+            text-transform: capitalize;
+    	    background:#444;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            background-color: #222;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007bff;
+        }
+    </style> 
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+		<br>
+	    <button type="button" onclick="login()">Sign Up<a href="index.html"></a></button
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are not empty
+            if (username !== "" && password !== "") {
+                alert("Login successful! Redirecting to the travel blog.");
+                // Add logic to redirect to the actual travel blog page
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+    </script>
+</body>
+</html>
